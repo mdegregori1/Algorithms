@@ -3,8 +3,23 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  #initialize at no batches
+  finished_batches = None
 
+  for key, value in recipe.items():
+
+    if key in ingredients.keys():
+      batches_possible = ingredients[key] // value
+      if finished_batches is None:
+        finished_batches = batches_possible
+      elif batches_possible < finished_batches:
+        finished_batches = batches_possible
+    else:
+      finished_batches = 0
+
+  return finished_batches
+
+#rewrite when possible, a bit messy
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
