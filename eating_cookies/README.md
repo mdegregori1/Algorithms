@@ -12,32 +12,66 @@ For example, for a jar of cookies with `n = 3` (the jar has 3 cookies inside it)
  3. He can eat 2 cookies, then 1 cookie
  4. He can eat 3 cookies all at once. 
 
+ n = 0
+ 0
+
  n = 1
- 1. 1 cookie 1 time 
+ 1 
 
  n = 2 
- 1. 1 cookie 1 time 1 cookie 1 times 
- 2. 2 cookie 1 time 
- 
+ 11
+ 2
+
  n = 3
- 1. 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 
- 2. 2 cookie 1 time 1 cookie 1 time 
- 3. 1 cookie 1 time 2 cookie 1 time 
- 4. 3 cookie 1 time 
+ 111
+ 21
+ 12
+ 3
+
 
  n = 4
- 1. 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 
- 2. 2 cookie 1 time 1 cookie 1 time 1 cookie 1 time 
- 3. 1 cookie 1 time 2 cookie 1 time 1 cookie 1 time 
+ 1111
+ 121
+ 112
+ 211
+ 13
+ 31
+ 22
+
  
  n = 5 
- 1. 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 1 cookie 
- 2. 2 cookie 1 time 1 cookie 1 time 1 cookie 1 time 1 cookie
- 3. 1 cookie 1 time 2 cookie 1 time 1 cookie 1 time 1 cookie
- 1. 1 cookie 1 time 1 cookie 1 time 1 cookie 1 time 2 cookie 
- 2. 2 cookie 1 time 1 cookie 1 time 2 cookie
- 3. 1 cookie 1 time 2 cookie 1 time 2 cookie 
- 4. 3 cookie 1 time 2 cookie
+ 11111
+ 113
+ 131
+ 311
+ 2111
+ 1211
+ 1121
+ 1112
+ 32
+ 23
+ 221
+ 212
+ 122
+ 
+ 11111
+ 1121
+ 1112
+ 1211
+ 2111
+ 113
+ 311
+ 131
+ 122
+ 212
+ 221
+ 23
+ 32
+
+ <!-- # prev + 1, and 2 before + 2, and 3 before + 3 -->
+(n-1)+ (n-2) + (n-3)
+
+
 
 
 
