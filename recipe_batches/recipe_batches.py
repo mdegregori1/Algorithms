@@ -8,31 +8,25 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  # define empty list to append to 
-  # can call key or item without looping
-  recipes_to_make = None
-  # if keys are not the same, then return 0 or null (don't have #necessary ingregredients)
-  if recipe.keys() != ingredients.keys():
-    return 0
-  else:
-    # if keys are the same, then you can compare the values 
-    for a,b in (recipe.items()):
-      for k,v in (ingredients.items()):
-        batches_possible = ingredients[k] // v
-        # print("recipe:", f"key: {a}, value: {b}")
-        # print("ingredients:", f"key: {k}, value: {v}")
-        if recipes_to_make is None:
-          recipes_to_make = batches_possible
-        elif batches_possible < recipes_to_make:
-          recipes_to_make = batches_possible
-    
-    return recipes_to_make
-  #     divide = ingredients[x] // recipe[x] 
-  #     if divide > 1:
-  #       recipes_to_make.append(divide) 
-  # return recipes_to_make
-    
- 
+    possible_batches = []
+    # must compare keys to see if they match
+    # loop through the items in both recipe and ingredients
+    # if keys are the same, then run look to compare
+    if recipe.keys() != ingredients.keys():
+      return 0
+    else:
+      for i in recipe:
+        # print('recipe:',recipe[i])
+        # print('ingredients:',ingredients[i])
+        if recipe[i] > ingredients[i]:
+          return 0
+        else:
+          #here, we're assuming that there are enough ingredients for the recipe. so, we have to determine how many we can make given the ingredients
+          divide = ingredients[i] // recipe[i]
+          print('division happens here',divide)
+          possible_batches.append(divide)
+
+        return max(possible_batches)
 
 
 

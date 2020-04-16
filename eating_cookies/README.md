@@ -40,7 +40,7 @@ For example, for a jar of cookies with `n = 3` (the jar has 3 cookies inside it)
 
  
  n = 5 
- 11111
+ <!-- 11111
  113
  131
  311
@@ -52,21 +52,25 @@ For example, for a jar of cookies with `n = 3` (the jar has 3 cookies inside it)
  23
  221
  212
- 122
- 
- 11111
- 1121
- 1112
- 1211
- 2111
- 113
- 311
- 131
- 122
- 212
- 221
- 23
- 32
+ 122  -->
+ 1|1111
+ 1|121
+ 1|112
+ 1|211
+ 1|13
+ 1|31
+ 1|22
+
+ +
+ 2|111
+ 2|21
+ 2|12
+ 2|3
+
+ +
+ 3|11
+ 3|2
+
 
  <!-- # prev + 1, and 2 before + 2, and 3 before + 3 -->
 (n-1)+ (n-2) + (n-3)
